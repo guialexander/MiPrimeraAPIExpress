@@ -1,7 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
-
+require('dotenv').config()
 const {
   handleGetAllData,
   handleGetByIdData,
@@ -46,7 +46,7 @@ app.patch('/api/hotels/:id', handleUpdateData)
 app.delete('/api/hotels/:id', handleDeleteData)
 
 
-const port = 3001
+const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
