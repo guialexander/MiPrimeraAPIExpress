@@ -45,7 +45,7 @@ app.patch('/api/hotels/:id', handleUpdateData)
 // DELETE -> /users/10
 app.delete('/api/hotels/:id', handleDeleteData)
 
-
+//se ajusta el codigo
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
